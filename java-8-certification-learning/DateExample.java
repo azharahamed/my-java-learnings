@@ -20,6 +20,8 @@ class DateExample {
 
     LocalDateTime localDateTime1 = LocalDateTime.of(2018,03,01,13,01);
     System.out.println("LocalDateTime1 : "+localDateTime1);
+    localDateTime1 = localDateTime1.minusDays(10);
+    System.out.println("LocalDateTime1 - 10 days : "+localDateTime1);
 
     LocalDateTime localDateTime2 = LocalDateTime.of(2018,03,01,13,01,02);
     System.out.println("LocalDateTime2 : "+localDateTime2);
