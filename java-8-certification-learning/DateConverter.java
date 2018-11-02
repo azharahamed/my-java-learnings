@@ -11,19 +11,28 @@ class DateConvertor {
         try{
 
        
-        String str = "1/1/99";
+        String str = "2012-12-01";
+        String format = "yyyy-MM-dd";
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        //sdf.setLenient(false);
         if (!str.matches("^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$") && !str.matches("^[0-3]?[0-9]-[0-3]?[0-9]-(?:[0-9]{2})?[0-9]{2}$")){
             System.out.println("Didn't match");
         }
-        if (str.matches("^[0-9].+[0-3]?[0-9]$")){
-            System.out.println("Matches Mine");
-        }
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date dt = sdf.parse(str);
         int year = Integer.parseInt(new SimpleDateFormat("yyyy").format(dt));
-		int month = Integer.parseInt(new SimpleDateFormat("MM").format(dt));
-		int day = Integer.parseInt(new SimpleDateFormat("dd").format(dt));
-        System.out.println("The date is "+ dt + " Year: " + year + " Month "+ month +" Day "+ day);
+        int month = Integer.parseInt(new SimpleDateFormat("MM").format(dt));
+        int day = Integer.parseInt(new SimpleDateFormat("dd").format(dt));
+        System.out.println("Year: " + year + " Month "+ month +" Day "+ day);
+        System.out.println("Format Length : " + format.length() + " String : " + str.length() );
+
+        if (year > 999 && str.matches("^[0-9].+[0-9///-][0-9]$") && str.length() <= format.length() ){
+            System.out.println("Matches Mine");            
+            //System.out.println("Year: " + year + " Month "+ month +" Day "+ day);
+        } else {
+            System.out.println("Didn't Match Mine");  
+            //&& str.length()<=format.length()
+        }
+        
     } catch(Exception e){
         System.out.println("Exception");
     }
