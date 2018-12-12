@@ -1,9 +1,18 @@
 class Q3 {
+  static String O = "";
   public static void main(String[] args) {
-    int []ints = new int[10];
-    int len = ints.length;
-    for(int i:ints){
-      System.out.print(i);
-    }
+    String out = "O";
+    int i = -1, j=-5;
+    if(i<5)
+      if(j<0)
+        if(i>j)
+          out+="1";
+        else
+          out+="2";
+      else 
+        out+="3";
+    else 
+      out+="4";
+    System.out.print(out);   
   }
 }
