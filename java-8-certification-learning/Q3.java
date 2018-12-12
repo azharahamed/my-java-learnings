@@ -1,22 +1,21 @@
-class A{
-  void method(){
-    System.out.print(" A B");
+interface Walk {
+  public default int getSpeed() {
+    return 5;
   }
 }
 
-class B extends A {
-  protected void method(){
-    System.out.print("C D");
-  }
-  void method2(){
-    System.out.print("Azhar");
+interface Run {
+  public default int getSpeed(){
+    return 10;
   }
 }
 
-class Q3 {
+class Q3 implements Walk, Run {
+  public int getSpeed(){
+    return 6;
+  }
   public static void main(String[] args) {
-    A a = new B();
-    a.method();
-    a.method2();
+    Q3 an = new Q3();
+    System.out.println(an.getSpeed());
   }
 }
