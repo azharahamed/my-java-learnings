@@ -1,15 +1,22 @@
-import javax.lang.model.util.ElementScanner6;
+class A{
+  void method(){
+    System.out.print(" A B");
+  }
+}
+
+class B extends A {
+  protected void method(){
+    System.out.print("C D");
+  }
+  void method2(){
+    System.out.print("Azhar");
+  }
+}
 
 class Q3 {
-  static String O = "";
   public static void main(String[] args) {
-    int _6 = 6;
-    if(_6>6)
-      System.out.print(">6");
-      System.out.print("or");
-    else{
-      System.out.print("<6");
-    }
-
+    A a = new B();
+    a.method();
+    a.method2();
   }
 }
