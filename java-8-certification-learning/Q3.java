@@ -1,21 +1,12 @@
-interface Walk {
-  public default int getSpeed() {
-    return 5;
-  }
-}
-
-interface Run {
-  public default int getSpeed(){
-    return 10;
-  }
-}
-
-class Q3 implements Walk, Run {
-  public int getSpeed(){
-    return 6;
-  }
+class Q3 {
+  int x = 013;
   public static void main(String[] args) {
-    Q3 an = new Q3();
-    System.out.println(an.getSpeed());
+    Q3 q3 = new Q3();
+    q3.go(22);
+  }
+
+  void go(final int i){
+    System.out.println(x);
+    System.out.print(i/x);
   }
 }
