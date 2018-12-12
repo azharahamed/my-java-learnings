@@ -1,18 +1,15 @@
+import javax.lang.model.util.ElementScanner6;
+
 class Q3 {
   static String O = "";
   public static void main(String[] args) {
-    String out = "O";
-    int i = -1, j=-5;
-    if(i<5)
-      if(j<0)
-        if(i>j)
-          out+="1";
-        else
-          out+="2";
-      else 
-        out+="3";
-    else 
-      out+="4";
-    System.out.print(out);   
+    int _6 = 6;
+    if(_6>6)
+      System.out.print(">6");
+      System.out.print("or");
+    else{
+      System.out.print("<6");
+    }
+
   }
 }
