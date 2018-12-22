@@ -3,7 +3,7 @@ public class Q1{
     public static void main(String args[]){
         ArrayList<String> list1 = new ArrayList<>();
         ArrayList<String> list2 = new ArrayList<>(10);
-        ArrayList<String> list3 = list2;
+        ArrayList<String> list3 = new ArrayList<>(list2);
 
         list1.add("List 1 - 1st Value");
         list1.add("List 1 - 2nd Value");
@@ -14,11 +14,16 @@ public class Q1{
         list3.add("List 3 - 3rd value");
         list3.add("List 3 - 4th value");
         list3.add("List 3 - 5th value");
-        System.out.println(list3.set(5, "List3 Replace"));
+        // System.out.println(list3.set(5, "List3 Replace"));
         System.out.println("-- List 1 --");
         for(String a: list1){
             System.out.println(a);
         }
+        System.out.println("-- List 2 --");
+        for(String a: list2){
+            System.out.println(a);
+        }
+        // list3.clear();
         System.out.println("-- List 2 --");
         for(String a: list2){
             System.out.println(a);
