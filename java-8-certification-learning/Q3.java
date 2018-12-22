@@ -1,15 +1,12 @@
-import javax.lang.model.util.ElementScanner6;
-
 class Q3 {
-  static String O = "";
+  int x = 013;
   public static void main(String[] args) {
-    int _6 = 6;
-    if(_6>6)
-      System.out.print(">6");
-      System.out.print("or");
-    else{
-      System.out.print("<6");
-    }
+    Q3 q3 = new Q3();
+    q3.go(22);
+  }
 
+  void go(final int i){
+    System.out.println(x);
+    System.out.print(i/x);
   }
 }
