@@ -1,5 +1,20 @@
-public class StringFunc{
+import java.util.ArrayList;
+import java.util.List;
+
+public class StringFunc{ 
     public static void main(String... str){
+
+        List<String> list = new ArrayList<>();
+        list.add(0, "Testing List");
+        for(String s: list){
+            System.out.println(s);
+        }
+        StringBuilder strBuilder = new StringBuilder();
+
+        strBuilder.insert(0, "Testing");
+
+        System.out.println(strBuilder);
+
         String a = "";
         a += 2;
         a += 'c';

@@ -13,6 +13,7 @@ class DateExample {
     System.out.println("Time 1 : " + time1);
 
     LocalTime time2 = LocalTime.of(6,15,30);
+    time2 = time2.plusMinutes(45);
     System.out.println("Time 2 : " + time2);
 
     LocalTime time3 = LocalTime.of(6,15,30,200);
