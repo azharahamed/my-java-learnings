@@ -12,6 +12,7 @@ public class StringFunc{
         StringBuilder strBuilder = new StringBuilder();
 
         strBuilder.insert(0, "Testing");
+        strBuilder.reverse().substring(0, 4);
 
         System.out.println(strBuilder);
 
