@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - P2P1",
+            "request": "launch",
+            "mainClass": "com.package2.P2P1",
+            "projectName": "java-8-certification-learning_74b76671"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Declaration",
             "request": "launch",
             "mainClass": "Declaration"
