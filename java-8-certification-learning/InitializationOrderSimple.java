@@ -10,6 +10,5 @@ public class InitializationOrderSimple {
 
     public static void main(String args[]){
         System.out.println("ready to contruct");
-        new InitializationOrderSimple (); 
     }
 }
