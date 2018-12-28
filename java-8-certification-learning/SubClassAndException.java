@@ -10,14 +10,23 @@ class A {
 }
 
 class B extends A {
-    public String functionA() throws ExhibitClosed {
+    public String functionA() {
         System.out.print("Function B");
         return "Testing B";
     }
+
+    public static void testing(){
+        System.out.println("Static can be called "+st);
+    
+    }
+    public static int st = 10;
 }
 
 public class SubClassAndException {
     public static void main(String[] aregs){
-
+        B b =  new B();
+        b.testing();
+        b.st++;
+        b.testing();
     }
 }
