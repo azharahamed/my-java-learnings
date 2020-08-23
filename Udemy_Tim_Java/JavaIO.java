@@ -14,15 +14,14 @@ public class JavaIO {
         try {
             x = getInt();
             y = getInt();
-        } catch(NoSuchElementException e){
-            throw new ArithmeticException("no suitable input");
-        }
-        System.out.println("X is " + x + ", y is " + y);
-        try {
+            System.out.println("X is " + x + ", y is " + y);
             return x/y;
-        } catch (ArithmeticException e){
-            throw new ArithmeticException("attempt to divide by zero");
+        } catch(ArithmeticException | NoSuchElementException e){
+            System.out.println(e.toString());
+            System.out.println("Can't handle this exception! Shutting out");
         }
+        return 0;
+
     }
 
     private static int getInt(){
