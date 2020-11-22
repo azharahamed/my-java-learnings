@@ -25,5 +25,10 @@ public class DateLearning{
         zonedDateTime = zonedDateTime.plusMonths(2).plusYears(1);
         System.out.println(zonedDateTime);
         System.out.println(ZoneId.systemDefault());
+
+        Period period = Period.ofYears(1);
+        zonedDateTime = zonedDateTime.plusYears(1);
+        System.out.println(zonedDateTime);
+
     }
 }
